@@ -165,13 +165,14 @@ h1.name {
   font-size: clamp(42px, 6.2vw, 84px);
   line-height: 0.98;
   letter-spacing: -0.02em;
-  color: #be185d; /* Clear dark text color */
-  background: transparent; /* Dark background ko completely hatane ke liye */
-  -webkit-text-fill-color: initial; /* Purane styling artifacts hatane ke liye */
-  text-shadow: none;
-  opacity: 1;
-  animation: rise .8s ease forwards .1s;
+  color: #be185d !important; /* Aapke text ka dark pink color */
+  background: transparent !important; /* Piche ka dabba completely hatane ke liye */
+  -webkit-text-fill-color: initial !important; 
+  text-shadow: none !important;
+  margin: 0;
+  padding: 0;
 }
+  
   
   .role{
   font-family:'Space Grotesk',sans-serif;
@@ -1591,5 +1592,32 @@ h1.name{background:linear-gradient(180deg,#2a1220 0%,#8b365f 100%);}
   loadOrbPosition();
 })();
 </script>
+  <!-- Groq AI Orb Button -->
+<div class="groq-orb" id="groqOrb" onclick="toggleChat()">
+  <div class="groq-orb-badge">AI</div>
+</div>
+
+<!-- Groq Chat Window -->
+<div class="groq-chat" id="groqChat">
+  <div class="groq-chat-header">
+    <div class="title"><div class="pulse"></div> Groq AI Assistant</div>
+    <button class="groq-chat-close" onclick="toggleChat()">×</button>
+  </div>
+  
+  <div class="groq-chat-body" id="chatBody">
+    <!-- API Key Setup Box -->
+    <div class="groq-key-setup" id="keySetup">
+      <p>Chat shuru karne ke liye apni Groq API Key dalein:</p>
+      <input type="password" id="apiKeyInput" placeholder="gsk_...">
+      <button onclick="saveApiKey()">Save Key</button>
+    </div>
+  </div>
+  
+  <div class="groq-chat-input">
+    <input type="text" id="chatInput" placeholder="Message type karein..." disabled>
+    <button class="groq-chat-send" id="sendBtn" onclick="sendMessage()" disabled>➤</button>
+  </div>
+</div>
+  
 </body>
 </html>
