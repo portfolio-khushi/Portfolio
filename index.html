@@ -159,30 +159,30 @@
     box-shadow:0 0 12px var(--cyan);
     animation:pulse 2s ease-in-out infinite;
   }
-h1.name{
-  font-family:'Georgia','Times New Roman',serif;
-  font-weight:700;
-  font-style:italic;
-  font-size:clamp(48px, 7vw, 88px);
-  line-height:0.95;
-  letter-spacing:-0.035em;
-  color:#6d183f;
-  background:none;
-  -webkit-text-fill-color:#6d183f;
-  text-shadow:0 3px 12px rgba(190,24,93,.12);
-    animation:rise .8s ease forwards .22s;
-  }
+h1.name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: clamp(42px, 6.2vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+  color: #be185d; /* Clear dark text color */
+  background: transparent; /* Dark background ko completely hatane ke liye */
+  -webkit-text-fill-color: initial; /* Purane styling artifacts hatane ke liye */
+  text-shadow: none;
+  opacity: 1;
+  animation: rise .8s ease forwards .1s;
+}
+  
   .role{
-    font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(18px, 2.4vw, 26px);
-    font-weight:500;
-    color:transparent;
-    background:linear-gradient(90deg, var(--cyan), var(--violet));
-    -webkit-background-clip:text;
-    background-clip:text;
-    margin-top:14px;
-    opacity:0;
-    animation:rise .8s ease forwards .34s;
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(18px,2.4vw,26px);
+  font-weight:500;
+  color:#be185d;
+  background:none;
+  -webkit-text-fill-color:#be185d;
+  margin-top:14px;
+  opacity:1;
+  animation:rise .8s ease forwards .22s;
   }
   .lede{
     margin-top:24px;
